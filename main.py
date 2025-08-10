@@ -34,7 +34,7 @@ def sen_help(message):
 def get_weather(message):
     city = message.text.strip()
     
-    url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={WEATHER_API_KEY}&units=metric"
+    url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={WEATHER_KEY}&units=metric"
     response = requests.get(url)
     data = response.json()
 
@@ -56,20 +56,12 @@ def get_weather(message):
 
     bot.reply_to(message, weather_text)
 
-@bot.message_handler(content_types=['video', 'music', 'sticker', 'text'
-    'audio',         # Audio files (MP3, etc.)
-    'document',      # Any kind of file
-    'photo',         # Images
-    'sticker',       # Stickers
-    'video',         # Videos
-    'video_note',    # Round video messages
-    'voice',         # Voice messages
-    'location',      # Location (lat/lon)
-    'contact',       # Shared contact
-    'venue',         # Location with title/address
-    'animation',     # GIFs
-    'dice',          # Dice and other random emoji games 🎲
-    'poll'])
+@bot.message_handler(content_types=[
+    'video', 'music', 'sticker', 'text',
+    'audio', 'document', 'photo', 'sticker',
+    'video', 'video_note', 'voice', 'location',
+    'contact', 'venue', 'animation', 'dice', 'poll'
+])
 def response(message):
     bot.reply_to(message, "Bu bot faqat ob-havo ma'lumotlari\nuchun mo'ljallangan iltimos shahar nomini yuboring")
 
