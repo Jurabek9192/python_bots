@@ -5,7 +5,7 @@ from aiogram.types import Message, ChatPermissions
 import asyncio
 import logging
 
-bot=Bot(token='8327907873:AAHgUaP-C47tK6pKRD6AT1E2_9v8pTHxwWA')
+bot=Bot(token=TOKEN)
 dp=Dispatcher()
 
 words=['yomon gaplar']
