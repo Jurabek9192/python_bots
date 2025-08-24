@@ -8,7 +8,7 @@ import logging
 bot=Bot(token='8327907873:AAHgUaP-C47tK6pKRD6AT1E2_9v8pTHxwWA')
 dp=Dispatcher()
 
-words=['jalab', 'suka', 'mol']
+words=['yomon gaplar']
 @dp.message(F.text)
 async def word_check(message: Message):
     text=message.text.lower()
